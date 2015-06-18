@@ -310,9 +310,9 @@
     // }
 
     // Attach viewport units buggyfill
-    if (viewportUnitsBuggyfill) {
-      viewportUnitsBuggyfill.init();
-    }
+    // if (viewportUnitsBuggyfill) {
+    //   viewportUnitsBuggyfill.init();
+    // }
   }
 
 })();
