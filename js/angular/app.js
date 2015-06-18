@@ -26,10 +26,10 @@
 
     $locationProvider.hashPrefix('!');
   }
-  
+
 
   function run() {
-    FastClick.attach(document.body);
+    // FastClick.attach(document.body);
   }
-    
+
 })();

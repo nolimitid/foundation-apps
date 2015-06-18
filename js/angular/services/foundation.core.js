@@ -94,7 +94,7 @@
       var activeElements = document.querySelectorAll('.is-active[zf-closable]');
       // action sheets are nested zf-closable elements, so we have to target the parent
       var nestedActiveElements = document.querySelectorAll('[zf-closable] > .is-active')
-      
+
       if (activeElements.length) {
         angular.forEach(activeElements, function(el) {
           if (options.exclude !== el.id) {
@@ -163,9 +163,9 @@
 
   function Setup() {
     // Attach FastClick
-    if (FastClick) {
-      FastClick.attach(document.body);
-    }
+    // if (FastClick) {
+    //   FastClick.attach(document.body);
+    // }
 
     // Attach viewport units buggyfill
     if (viewportUnitsBuggyfill) {
