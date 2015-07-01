@@ -163,14 +163,13 @@
 
   function Setup() {
     // Attach FastClick
-    // if (FastClick) {
-    //   FastClick.attach(document.body);
-    // }
-
+    if (typeof(FastClick) !== 'undefined') {
+      FastClick.attach(document.body);
+    }
     // Attach viewport units buggyfill
-    // if (viewportUnitsBuggyfill) {
-    //   viewportUnitsBuggyfill.init();
-    // }
+    if (typeof()viewportUnitsBuggyfill) !== 'undefined') {
+      viewportUnitsBuggyfill.init();
+    }
   }
 
 })();
