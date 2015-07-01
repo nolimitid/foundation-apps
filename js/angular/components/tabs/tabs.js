@@ -78,9 +78,7 @@
       replace: true,
       templateUrl: 'components/tabs/tabs.html',
       controller: 'ZfTabsController',
-      scope: {
-        displaced: '@?'
-      },
+      scope: true,
       link: link
     };
 
@@ -110,10 +108,7 @@
       restrict: 'A',
       transclude: 'true',
       replace: true,
-      scope: {
-        tabs: '=?',
-        target: '@'
-      },
+      scope: true,
       templateUrl: 'components/tabs/tab-content.html',
       link: link
     };
@@ -157,9 +152,7 @@
       restrict: 'EA',
       templateUrl: 'components/tabs/tab.html',
       transclude: true,
-      scope: {
-        title: '@'
-      },
+      scope: true,
       require: '^zfTabs',
       replace: true,
       link: link
