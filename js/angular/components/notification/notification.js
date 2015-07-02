@@ -166,7 +166,7 @@
         };
 
         // close on swipe
-        if (typeof(Hammer) !== 'undefined') {
+        if (typeof Hammer !== 'undefined') {
           hammerElem = new Hammer(element[0]);
           // set the options for swipe (to make them a bit more forgiving in detection)
           hammerElem.get('swipe').set({
@@ -175,7 +175,7 @@
             velocity: 0.5 // and this is how fast the swipe must travel
           });
         }
-        if(typeof(hammerElem) !== 'undefined') {
+        if(typeof hammerElem !== 'undefined') {
           hammerElem.on('swipe', function() {
             if (scope.active) {
               scope.hide();
