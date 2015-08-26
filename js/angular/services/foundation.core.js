@@ -167,7 +167,7 @@
       FastClick.attach(document.body);
     }
     // Attach viewport units buggyfill
-    if (typeof()viewportUnitsBuggyfill) !== 'undefined') {
+    if (typeof(viewportUnitsBuggyfill) !== 'undefined') {
       viewportUnitsBuggyfill.init();
     }
   }
