@@ -1,7 +1,7 @@
 angular.module('foundation').run(['$templateCache', function($templateCache) {
   $templateCache.put('components/accordion/accordion-item.html',
     '<div class="accordion-item" ng-class="{\'is-active\': active}">\n' +
-    '  <div class="accordion-title" ng-click="activate()">{{ title }}</div>\n' +
+    '  <div class="accordion-title is-primary-fg" ng-click="activate()">{{ title }}</div>\n' +
     '  <div class="accordion-content" ng-transclude></div>\n' +
     '</div>\n' +
     '');
@@ -151,7 +151,7 @@ angular.module('foundation').run(['$templateCache', function($templateCache) {
 angular.module('foundation').run(['$templateCache', function($templateCache) {
   $templateCache.put('components/tabs/tab.html',
     '<div class="tab-item"\n' +
-    '  ng-class="{\'is-active\': active}"\n' +
+    '  ng-class="{\'is-active is-primary-fg is-primary-before-bg\': active}"\n' +
     '  ng-click="makeActive()">{{ title }}</div>\n' +
     '');
 }]);

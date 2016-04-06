@@ -3181,8 +3181,8 @@ angular.module('markdown', [])
       });
 
       function makeActive() {
-        element.parent().children().removeClass('is-active is-primary-fg');
-        element.addClass('is-active is-primary-fg');
+        element.parent().children().removeClass('is-active');
+        element.addClass('is-active');
       }
     }
   }
