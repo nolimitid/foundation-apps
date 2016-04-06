@@ -403,7 +403,7 @@
         if (event.targetScope === scope && animation.enter) {
           element.removeClass(animation.enter);
         }
-        
+
         animationEnded = true;
 
       }
@@ -492,7 +492,7 @@
             data: getData(page),
             animation: buildAnimations(page),
           };
-          
+
           $stateProvider.state(page.name, state);
         }
       });
@@ -508,7 +508,7 @@
               '': buildState(page.path, page)
             }
           };
-          
+
           angular.forEach(page.children, function(sub) {
             state.views[sub.name + '@' + page.name] = buildState(sub.path, page);
           });
@@ -518,7 +518,7 @@
     };
 
     this.$get = angular.noop;
-    
+
     function getData(page) {
       var data = { vars: {} };
       if (page.data) {
@@ -532,7 +532,7 @@
       angular.extend(data.vars, page);
       return data;
     }
-    
+
     function buildState(path, state) {
       return {
         templateUrl: path,
@@ -1124,7 +1124,7 @@ angular.module('markdown', [])
     function toggle() {
       content.toggle();
       container.toggle();
-      
+
       if (!$scope.$$phase) {
         content.$apply();
         container.$apply();
@@ -2493,7 +2493,7 @@ angular.module('markdown', [])
         element = angular.element(html);
 
         scope = $rootScope.$new();
-        
+
         for(var i = 0; i < props.length; i++) {
           if(config[props[i]]) {
             element.attr(props[i], config[props[i]]);
@@ -2606,7 +2606,7 @@ angular.module('markdown', [])
           if (!scope.$root.$$phase) {
             scope.$apply();
           }
-          
+
           return;
         });
 
@@ -2727,7 +2727,7 @@ angular.module('markdown', [])
           } else if (msg == 'toggle') {
             scope.toggle();
           }
-          
+
           if (!scope.$root.$$phase) {
             scope.$apply();
           }
@@ -2756,7 +2756,7 @@ angular.module('markdown', [])
         scope.toggle = function() {
           scope.active = !scope.active;
           foundationApi.animate(element, scope.active, animationIn, animationOut);
-          
+
           return;
         };
 
@@ -3181,8 +3181,8 @@ angular.module('markdown', [])
       });
 
       function makeActive() {
-        element.parent().children().removeClass('is-active');
-        element.addClass('is-active');
+        element.parent().children().removeClass('is-active is-primary-fg');
+        element.addClass('is-active is-primary-fg');
       }
     }
   }
